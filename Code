@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.println("Gold Value Calculator");
+    System.out.println("Enter the weight of gold in ounces:");
+    double weightInOunces = scanner.nextDouble();
+
+    System.out.println("Enter the current price of gold per ounce: $");
+    double pricePerOunce = scanner.nextDouble();
+
+    double valueInOunces = weightInOunces * pricePerOunce;
+    double valueInGrams = valueInOunces * 31.1035; //one ounce is appeox 31.1035 grams
+    double valueInKilograms = valueInGrams / 1000.0;
+
+    System.out.println("value of gold in ounces: $" + valueInOunces);
+    System.out.println("value of gold in grams: $" + valueInGrams);
+    System.out.println("value of gold in kilograms: $" + valueInKilograms);
+
+    scanner.close();
+  }
+}
